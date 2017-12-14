@@ -4,16 +4,19 @@ simple password encryption
 Includes gitignore file to ignore decrypted yml file
 
 # Decrypt
-`make decrypt`
+`$ make decrypt FILE=password.secret.yml`
 
 password `12345`
+
+
+# Encrypt
+`$ make encrypt FILE=password.secret.yml`
 
 Will output decrypted yml file from file named
 `password.secret.yml.gpg`
 
 
-# Encrypt
-`make encrypt`
+
 
 when prompted type in paraphase
 
