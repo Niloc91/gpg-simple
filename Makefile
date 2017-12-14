@@ -1,5 +1,17 @@
+USAGE="USAGE ..."
+guard-%:
+	@if [ "${${*}}" == "" ]; then \
+			echo "CONFIGURATION ERROR! Environment variable $* not set"; \
+			echo "USAGE : $(USAGE)"; \
+			exit 1; \
+	fi
 
-encrypt:
-	gpg -c password.secret.decrypt.yml	
-decrypt:
-	gpg -o  password.secret.decrypt.yml -d password.secret.yml.gpg
+usage:
+	echo "USAGE : $(USAGE)";
+
+encrypt: guard-FILE
+	rm $(FILE).gpg || true
+	gpg -c $(FILE)
+decrypt: guard-FILE
+	rm $(FILE) || true
+	gpg -o $(FILE) -d $(FILE).gpg
