@@ -26,7 +26,7 @@ encrypt: guard-FILE
 	@echo ""
 	@echo "==== gpg file $(GPG_FILE) : START ===="
 	@echo ""
-	cat $(GPG_FILE)
+	@echo $(shell cat $(GPG_FILE))
 	@echo ""
 	@echo "==== gpg file $(GPG_FILE) : END ===="
 	@echo ""
