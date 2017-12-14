@@ -9,7 +9,7 @@ Includes gitignore file to ignore decrypted yml file
 password `12345`
 
 Will output decrypted yml file from file named
-`password.secrept.yml.gpg`
+`password.secret.yml.gpg`
 
 
 # Encrypt
