@@ -5,7 +5,9 @@ Includes gitignore file to ignore decrypted yml file
 
 # Decrypt
 `make decrypt`
- 
+
+password `12345`
+
 Will output decrypted yml file from file named
 `password.secrept.yml.gpg`
 
